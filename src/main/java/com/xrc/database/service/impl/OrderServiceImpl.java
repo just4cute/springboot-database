@@ -64,6 +64,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, Orders> implements I
         try {
             System.out.println("线程" + Thread.currentThread().getId() + "开始执行");
             for (int i = 1; i < 100000; i++) {
+                System.out.println("线程" + Thread.currentThread().getId() + i + "开始执行");
                 Orders orders = new Orders();
                 orders.setId(IdUtil.simpleUUID());
                 orders.setCreateTime(new Date());

@@ -22,7 +22,7 @@ public class TestController {
     @Resource
     IOrderService orderService;
 
-    private final CountDownLatch countDownLatch = new CountDownLatch(10);
+    private final CountDownLatch countDownLatch = new CountDownLatch(100);
 
     private ThreadLocal<Integer> currentUser = ThreadLocal.withInitial(() -> null);
 
